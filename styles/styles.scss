@@ -6,7 +6,9 @@
   $theme-hero-image: '../_img/hero.png'
 );
 
-// 🎨 Custom Color Tokens (Define NEW tokens — not modifying existing)
+@forward 'uswds';
+
+// Custom Ernestly theme tokens — define brand colors and map them
 $custom-color-tokens: (
   'ernestly-mint': (
     50: #e6fff6,
@@ -18,7 +20,7 @@ $custom-color-tokens: (
     600: #00cc90,
     700: #00996c,
     800: #006648,
-    900: #003324,
+    900: #003324
   ),
   'earnest-gold': (
     50: #fff8e6,
@@ -30,11 +32,11 @@ $custom-color-tokens: (
     600: #cc9f00,
     700: #997700,
     800: #664f00,
-    900: #332800,
+    900: #332800
   )
 );
 
-// ✅ Merge into USWDS token system
+// These must come after @forward so USWDS tokens exist
 $theme-color-tokens: map-merge($theme-color-tokens, $custom-color-tokens);
 
 $theme-color-map: map-merge(
@@ -45,10 +47,7 @@ $theme-color-map: map-merge(
   )
 );
 
-// Forward base USWDS styles
-@forward 'uswds';
-
-// Custom utilities
+// Custom classes
 .ernestly-button {
   @include u-bg('accent-mint-500');
   @include u-text('white');
