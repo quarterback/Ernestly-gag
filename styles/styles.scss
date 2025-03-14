@@ -1,4 +1,3 @@
-// 1. Load USWDS core first so we get access to theme tokens
 @use 'uswds-core' as * with (
   $theme-show-notifications: false,
   $theme-font-path: '../node_modules/@uswds/uswds/dist/fonts',
@@ -7,36 +6,36 @@
   $theme-hero-image: '../_img/hero.png'
 );
 
-// 2. Then define custom tokens based on what USWDS gives us
-$theme-color-tokens: map-merge(
-  $theme-color-tokens,
-  (
-    'ernestly-mint': (
-      50: #e6fff6,
-      100: #ccffee,
-      200: #99ffe0,
-      300: #66ffd1,
-      400: #33ffc3,
-      500: #00ffb4,
-      600: #00cc90,
-      700: #00996c,
-      800: #006648,
-      900: #003324,
-    ),
-    'earnest-gold': (
-      50: #fff8e6,
-      100: #ffefcc,
-      200: #ffe599,
-      300: #ffdb66,
-      400: #ffd133,
-      500: #ffc700,
-      600: #cc9f00,
-      700: #997700,
-      800: #664f00,
-      900: #332800,
-    )
+// 🎨 Custom Color Tokens (Define NEW tokens — not modifying existing)
+$custom-color-tokens: (
+  'ernestly-mint': (
+    50: #e6fff6,
+    100: #ccffee,
+    200: #99ffe0,
+    300: #66ffd1,
+    400: #33ffc3,
+    500: #00ffb4,
+    600: #00cc90,
+    700: #00996c,
+    800: #006648,
+    900: #003324,
+  ),
+  'earnest-gold': (
+    50: #fff8e6,
+    100: #ffefcc,
+    200: #ffe599,
+    300: #ffdb66,
+    400: #ffd133,
+    500: #ffc700,
+    600: #cc9f00,
+    700: #997700,
+    800: #664f00,
+    900: #332800,
   )
 );
+
+// ✅ Merge into USWDS token system
+$theme-color-tokens: map-merge($theme-color-tokens, $custom-color-tokens);
 
 $theme-color-map: map-merge(
   $theme-color-map,
@@ -46,10 +45,10 @@ $theme-color-map: map-merge(
   )
 );
 
-// 3. Forward the complete USWDS styles
+// Forward base USWDS styles
 @forward 'uswds';
 
-// 4. Custom utilities
+// Custom utilities
 .ernestly-button {
   @include u-bg('accent-mint-500');
   @include u-text('white');
