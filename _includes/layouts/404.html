@@ -1,10 +1,22 @@
 ---
 layout: layouts/page
+title: Page not found
+content: >
+  The interface you requested has been deprecated.
+
+  In the future we’re building, not all pages will render. Some ideas were never designed to scale. Some systems cannot be forked.
+
+  Please check the protocol and try again. Or navigate to a different jurisdiction.
 ---
 
 <div class="grid-row grid-gap">
-    <div class="desktop:grid-col-12">
-      <h1>{{title}}</h1>
-      <p>{{content}}</p>
-    </div>
+  <div class="desktop:grid-col-12">
+    <h1>{{ title }}</h1>
+    <p class="usa-intro">{{ content | safe }}</p>
+
+    <p>
+      You may want to return <a href="/">home</a> or explore our <a href="/tracks/">tracks</a> to locate the version of reality you were looking for.
+    </p>
+    <p class="text-italic">Error 404: Trust not found.</p>
   </div>
+</div>
