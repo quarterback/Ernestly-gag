@@ -1,0 +1,23 @@
+// overrides/_ernestly.scss
+
+.ernestly-button {
+  @include u-bg('accent-cool-lighter');
+  @include u-text('white');
+  @include u-padding-x(3);
+  @include u-padding-y(1);
+  @include u-radius('pill');
+  font-weight: bold;
+  border: none;
+  transition: background 0.3s ease;
+
+  &:hover {
+    @include u-bg('accent-cool');
+  }
+}
+
+.usa-banner--ernestly {
+  background-color: color('gold-20');
+  border-bottom: 2px solid color('gold-50');
+  font-family: $theme-font-type-sans;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
