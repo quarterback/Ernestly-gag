@@ -1,3 +1,5 @@
+@forward 'uswds'; // ✅ MUST be first
+
 @use 'uswds-core' as * with (
   $theme-show-notifications: false,
   $theme-font-path: '../node_modules/@uswds/uswds/dist/fonts',
@@ -67,8 +69,8 @@ $theme-color-map: map-merge(
   }
 }
 
-// -------------------------------
-// ✅ Import USWDS
-// -------------------------------
-
-@forward 'uswds';
+.usa-banner {
+  border-bottom: 2px solid #cc9f00;
+  font-family: $theme-font-type-sans;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
