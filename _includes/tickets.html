@@ -2,12 +2,10 @@
   <div class="grid-container usa-prose">
     <h1 class="usa-heading-xl">Badge Tiers</h1>
     <p class="usa-intro">
-      Access is identity. Choose your Ernestly badge to signal your alignment, intention, and contribution to the disruption layer.
+      Choose your access. All badge metadata is resolved via our civic-preferred coordination layer.
     </p>
 
     <div class="usa-card-group grid-row grid-gap" id="badge-grid">
-
-      <!-- Each badge has a "loading" state that swaps out on page load via JS -->
 
       {% assign badges = 
         [
@@ -46,7 +44,10 @@
           </div>
           <div class="usa-card__media">
             <div class="badge-loader">
-              <p class="text-center text-base">Resolving {{ badge.name | split: " " | last | downcase }} metadata...</p>
+              <div class="badge-status-text text-center text-base">Verifying badge credentials…</div>
+              <div class="badge-progress-bar">
+                <div class="badge-progress-fill" style="width: 0%;"></div>
+              </div>
             </div>
             <i data-lucide="{{ badge.icon }}" class="badge-icon" style="width: 40px; height: 40px; display: none;"></i>
           </div>
@@ -60,24 +61,49 @@
     </div>
 
     <p class="margin-top-4">
-      <strong>Note:</strong> Badges are non-fungible, non-refundable, and temporarily unavailable during DAO cooldowns.
+      <strong>Note:</strong> All badge tiers are dynamically minted at rest and subject to governance latency.
     </p>
   </div>
 </section>
+
+<style>
+  .badge-progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #e6e6e6;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+  }
+  .badge-progress-fill {
+    height: 100%;
+    background-color: #00ccbc;
+    transition: width 1.5s ease-out;
+  }
+</style>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".badge-card");
 
     cards.forEach((card, i) => {
-      const delay = 800 + Math.random() * 1200;
+      const fill = card.querySelector(".badge-progress-fill");
+      const icon = card.querySelector(".badge-icon");
+      const body = card.querySelector(".usa-card__body");
+      const loader = card.querySelector(".badge-loader");
 
+      // Simulate loading progression
       setTimeout(() => {
+        fill.style.width = "100%";
+      }, 200); // Start a little after DOM loads
+
+      // Fully reveal after progress completes
+      setTimeout(() => {
+        loader.style.display = "none";
+        icon.style.display = "block";
+        body.style.opacity = 1;
         card.setAttribute("data-loaded", "true");
-        card.querySelector(".badge-loader").style.display = "none";
-        card.querySelector(".badge-icon").style.display = "block";
-        card.querySelector(".usa-card__body").style.opacity = 1;
-      }, delay);
+      }, 1700); // Match progress animation time
     });
   });
 </script>
