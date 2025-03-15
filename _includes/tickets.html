@@ -1,3 +1,12 @@
+---
+layout: layouts/page
+title: Tickets
+permalink: /tickets/
+eleventyNavigation:
+  key: Tickets
+  order: 7
+---
+
 <section class="usa-section">
   <div class="grid-container usa-prose">
     <h1 class="usa-heading-xl">Badge Tiers</h1>
@@ -6,41 +15,10 @@
     </p>
 
     <div class="usa-card-group grid-row grid-gap" id="badge-grid">
-
-      {% assign badges = 
-        [
-          {
-            "name": "Shadow Stakeholder",
-            "icon": "eye-off",
-            "price": "$88.00",
-            "desc": "Signal alignment from afar. Includes general admission and light institutional critique."
-          },
-          {
-            "name": "Protocol Adjacent",
-            "icon": "share-2",
-            "price": "$288.00",
-            "desc": "You don’t build, but you definitely advise. Includes breakout access and hallway gravitas."
-          },
-          {
-            "name": "Civic Liquidity Provider",
-            "icon": "droplet",
-            "price": "$888.00",
-            "desc": "Grants access to Grift Track™, off-chain lounges, and panelist nodding privileges."
-          },
-          {
-            "name": "Alignment Architect",
-            "icon": "compass",
-            "price": "$8,888.00",
-            "desc": "All-access, off-chain dinners, governance veto visibility. Comes with a velvet pouch."
-          }
-        ]
-      %}
-
-      {% for badge in badges %}
       <div class="usa-card tablet:grid-col-6 desktop:grid-col-3">
         <div class="usa-card__container badge-card" data-loaded="false">
           <div class="usa-card__header">
-            <h2 class="usa-card__heading">{{ badge.name }}</h2>
+            <h2 class="usa-card__heading">Shadow Stakeholder</h2>
           </div>
           <div class="usa-card__media">
             <div class="badge-loader">
@@ -49,19 +27,90 @@
                 <div class="badge-progress-fill" style="width: 0%;"></div>
               </div>
             </div>
-            <i data-lucide="{{ badge.icon }}" class="badge-icon" style="width: 40px; height: 40px; display: none;"></i>
+            <i data-lucide="eye-off" class="badge-icon" style="width: 40px; height: 40px; display: none;"></i>
           </div>
           <div class="usa-card__body" style="opacity: 0;">
-            <p class="text-base text-bold">{{ badge.price }}</p>
-            <p class="margin-top-1">{{ badge.desc }}</p>
+            <p class="text-base text-bold">$88.00</p>
+            <p class="margin-top-1">
+              Signal alignment from afar. Includes general admission and light institutional critique.
+            </p>
           </div>
         </div>
       </div>
-      {% endfor %}
+
+      <div class="usa-card tablet:grid-col-6 desktop:grid-col-3">
+        <div class="usa-card__container badge-card" data-loaded="false">
+          <div class="usa-card__header">
+            <h2 class="usa-card__heading">Protocol Adjacent</h2>
+          </div>
+          <div class="usa-card__media">
+            <div class="badge-loader">
+              <div class="badge-status-text text-center text-base">Resolving protocol metadata…</div>
+              <div class="badge-progress-bar">
+                <div class="badge-progress-fill" style="width: 0%;"></div>
+              </div>
+            </div>
+            <i data-lucide="share-2" class="badge-icon" style="width: 40px; height: 40px; display: none;"></i>
+          </div>
+          <div class="usa-card__body" style="opacity: 0;">
+            <p class="text-base text-bold">$288.00</p>
+            <p class="margin-top-1">
+              You don’t build, but you definitely advise. Includes breakout access and hallway gravitas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="usa-card tablet:grid-col-6 desktop:grid-col-3">
+        <div class="usa-card__container badge-card" data-loaded="false">
+          <div class="usa-card__header">
+            <h2 class="usa-card__heading">Civic Liquidity Provider</h2>
+          </div>
+          <div class="usa-card__media">
+            <div class="badge-loader">
+              <div class="badge-status-text text-center text-base">Streaming civic tokens…</div>
+              <div class="badge-progress-bar">
+                <div class="badge-progress-fill" style="width: 0%;"></div>
+              </div>
+            </div>
+            <i data-lucide="droplet" class="badge-icon" style="width: 40px; height: 40px; display: none;"></i>
+          </div>
+          <div class="usa-card__body" style="opacity: 0;">
+            <p class="text-base text-bold">$888.00</p>
+            <p class="margin-top-1">
+              Grants access to Grift Track™, off-chain lounges, and panelist nodding privileges.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="usa-card tablet:grid-col-6 desktop:grid-col-3">
+        <div class="usa-card__container badge-card" data-loaded="false">
+          <div class="usa-card__header">
+            <h2 class="usa-card__heading">Alignment Architect</h2>
+          </div>
+          <div class="usa-card__media">
+            <div class="badge-loader">
+              <div class="badge-status-text text-center text-base">Finalizing governance posture…</div>
+              <div class="badge-progress-bar">
+                <div class="badge-progress-fill" style="width: 0%;"></div>
+              </div>
+            </div>
+            <i data-lucide="compass" class="badge-icon" style="width: 40px; height: 40px; display: none;"></i>
+          </div>
+          <div class="usa-card__body" style="opacity: 0;">
+            <p class="text-base text-bold">$8,888.00</p>
+            <p class="margin-top-1">
+              All-access, off-chain dinners, governance veto visibility. Comes with a velvet pouch.
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <p class="margin-top-4">
-      <strong>Note:</strong> All badge tiers are dynamically minted at rest and subject to governance latency.
+      <strong>Note:</strong> All badge tiers are minted in good faith. Refunds are conceptual.
     </p>
   </div>
 </section>
@@ -86,24 +135,22 @@
   document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".badge-card");
 
-    cards.forEach((card, i) => {
+    cards.forEach((card) => {
       const fill = card.querySelector(".badge-progress-fill");
       const icon = card.querySelector(".badge-icon");
       const body = card.querySelector(".usa-card__body");
       const loader = card.querySelector(".badge-loader");
 
-      // Simulate loading progression
       setTimeout(() => {
         fill.style.width = "100%";
-      }, 200); // Start a little after DOM loads
+      }, 200);
 
-      // Fully reveal after progress completes
       setTimeout(() => {
         loader.style.display = "none";
         icon.style.display = "block";
         body.style.opacity = 1;
         card.setAttribute("data-loaded", "true");
-      }, 1700); // Match progress animation time
+      }, 1700);
     });
   });
 </script>
