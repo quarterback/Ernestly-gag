@@ -1,109 +1,171 @@
+<section class="usa-section bg-primary-darker text-white">
+  <div class="grid-container usa-prose">
+    <h1 class="usa-heading-xl text-white">Badge Tiers</h1>
+    <p class="usa-intro text-accent-cool font-sans-lg">
+      Choose your access. All badge metadata is resolved via our civic-preferred coordination layer.
+    </p>
+    <div class="bg-primary-darkest padding-2 margin-top-3 margin-bottom-4 font-sans-sm">
+      <p class="margin-0">🗳 Badge prices algorithmically determined by social capital scoring and venture funding proximity.</p>
+    </div>
+  </div>
+</section>
 
 <section class="usa-section">
   <div class="grid-container usa-prose">
-    <h1 class="usa-heading-xl">Badge Tiers</h1>
-    <p class="usa-intro">
-      Choose your access. All badge metadata is resolved via our civic-preferred coordination layer.
-    </p>
-
     <div class="usa-card-group grid-row grid-gap" id="badge-grid">
       <div class="usa-card tablet:grid-col-6 desktop:grid-col-3">
-        <div class="usa-card__container badge-card" data-loaded="false">
+        <div class="usa-card__container badge-card border-top-05 border-secondary" data-loaded="false">
           <div class="usa-card__header">
             <h2 class="usa-card__heading">Shadow Stakeholder</h2>
+            <p class="font-sans-sm text-secondary-dark margin-y-1">Entry-Level Democracy</p>
           </div>
-          <div class="usa-card__media">
+          <div class="usa-card__media bg-secondary-lighter padding-y-5">
             <div class="badge-loader">
               <div class="badge-status-text text-center text-base">Verifying badge credentials…</div>
               <div class="badge-progress-bar">
                 <div class="badge-progress-fill" style="width: 0%;"></div>
               </div>
             </div>
-            <i data-lucide="eye-off" class="badge-icon" style="width: 40px; height: 40px; display: none;"></i>
+            <div class="display-flex flex-justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="badge-icon text-secondary-dark" style="display: none;"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path><line x1="2" y1="2" x2="22" y2="22"></line></svg>
+            </div>
           </div>
           <div class="usa-card__body" style="opacity: 0;">
             <p class="text-base text-bold">$88.00</p>
             <p class="margin-top-1">
               Signal alignment from afar. Includes general admission and light institutional critique.
             </p>
+            <ul class="usa-list margin-top-2">
+              <li>Access to main sessions (rear seating only)</li>
+              <li>Permission to tweet about the event</li>
+              <li>Digital badge with no governance rights</li>
+              <li>Freedom to observe but not influence</li>
+            </ul>
+          </div>
+          <div class="usa-card__footer">
+            <button class="usa-button usa-button--outline width-full">Select Tier</button>
           </div>
         </div>
       </div>
 
       <div class="usa-card tablet:grid-col-6 desktop:grid-col-3">
-        <div class="usa-card__container badge-card" data-loaded="false">
+        <div class="usa-card__container badge-card border-top-05 border-accent-warm" data-loaded="false">
           <div class="usa-card__header">
             <h2 class="usa-card__heading">Protocol Adjacent</h2>
+            <p class="font-sans-sm text-accent-warm-dark margin-y-1">Speculative Access</p>
           </div>
-          <div class="usa-card__media">
+          <div class="usa-card__media bg-accent-warm-lighter padding-y-5">
             <div class="badge-loader">
               <div class="badge-status-text text-center text-base">Resolving protocol metadata…</div>
               <div class="badge-progress-bar">
                 <div class="badge-progress-fill" style="width: 0%;"></div>
               </div>
             </div>
-            <i data-lucide="share-2" class="badge-icon" style="width: 40px; height: 40px; display: none;"></i>
+            <div class="display-flex flex-justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="badge-icon text-accent-warm-dark" style="display: none;"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+            </div>
           </div>
           <div class="usa-card__body" style="opacity: 0;">
             <p class="text-base text-bold">$288.00</p>
             <p class="margin-top-1">
-              You don’t build, but you definitely advise. Includes breakout access and hallway gravitas.
+              You don't build, but you definitely advise. Includes breakout access and hallway gravitas.
             </p>
+            <ul class="usa-list margin-top-2">
+              <li>Access to breakout sessions and panels</li>
+              <li>Invitation to networking events (observer status)</li>
+              <li>Permission to use "civic innovator" in bio</li>
+              <li>Limited proposal commenting rights</li>
+            </ul>
+          </div>
+          <div class="usa-card__footer">
+            <button class="usa-button usa-button--outline width-full">Select Tier</button>
           </div>
         </div>
       </div>
 
       <div class="usa-card tablet:grid-col-6 desktop:grid-col-3">
-        <div class="usa-card__container badge-card" data-loaded="false">
+        <div class="usa-card__container badge-card border-top-05 border-primary" data-loaded="false">
           <div class="usa-card__header">
             <h2 class="usa-card__heading">Civic Liquidity Provider</h2>
+            <p class="font-sans-sm text-primary-dark margin-y-1">Validated Influence</p>
           </div>
-          <div class="usa-card__media">
+          <div class="usa-card__media bg-primary-lighter padding-y-5">
             <div class="badge-loader">
               <div class="badge-status-text text-center text-base">Streaming civic tokens…</div>
               <div class="badge-progress-bar">
                 <div class="badge-progress-fill" style="width: 0%;"></div>
               </div>
             </div>
-            <i data-lucide="droplet" class="badge-icon" style="width: 40px; height: 40px; display: none;"></i>
+            <div class="display-flex flex-justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="badge-icon text-primary-dark" style="display: none;"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+            </div>
           </div>
           <div class="usa-card__body" style="opacity: 0;">
             <p class="text-base text-bold">$888.00</p>
             <p class="margin-top-1">
               Grants access to Grift Track™, off-chain lounges, and panelist nodding privileges.
             </p>
+            <ul class="usa-list margin-top-2">
+              <li>VIP access to all tracks including Grift Track™</li>
+              <li>Invitation to speaker dinners (corners only)</li>
+              <li>Governance voting rights (3x multiplier)</li>
+              <li>LinkedIn endorsement from conference organizers</li>
+            </ul>
+          </div>
+          <div class="usa-card__footer">
+            <button class="usa-button usa-button--outline width-full">Select Tier</button>
           </div>
         </div>
       </div>
 
       <div class="usa-card tablet:grid-col-6 desktop:grid-col-3">
-        <div class="usa-card__container badge-card" data-loaded="false">
+        <div class="usa-card__container badge-card border-top-05 border-secondary" data-loaded="false">
           <div class="usa-card__header">
             <h2 class="usa-card__heading">Alignment Architect</h2>
+            <p class="font-sans-sm text-secondary-dark margin-y-1">Sovereign Participation</p>
           </div>
-          <div class="usa-card__media">
+          <div class="usa-card__media bg-secondary-lighter padding-y-5">
             <div class="badge-loader">
               <div class="badge-status-text text-center text-base">Finalizing governance posture…</div>
               <div class="badge-progress-bar">
                 <div class="badge-progress-fill" style="width: 0%;"></div>
               </div>
             </div>
-            <i data-lucide="compass" class="badge-icon" style="width: 40px; height: 40px; display: none;"></i>
+            <div class="display-flex flex-justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="badge-icon text-secondary-dark" style="display: none;"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+            </div>
           </div>
           <div class="usa-card__body" style="opacity: 0;">
             <p class="text-base text-bold">$8,888.00</p>
             <p class="margin-top-1">
               All-access, off-chain dinners, governance veto visibility. Comes with a velvet pouch.
             </p>
+            <ul class="usa-list margin-top-2">
+              <li>Unlimited access to all sessions and private lounges</li>
+              <li>Speaking slot guaranteed regardless of qualifications</li>
+              <li>Conference decisions subject to your approval</li>
+              <li>Velvet pouch with commemorative governance token</li>
+              <li>Your name in major grant applications</li>
+            </ul>
+          </div>
+          <div class="usa-card__footer">
+            <button class="usa-button width-full">Select Tier</button>
           </div>
         </div>
       </div>
-
     </div>
 
-    <p class="margin-top-4">
-      <strong>Note:</strong> All badge tiers are minted in good faith. Refunds are conceptual.
-    </p>
+    <div class="margin-top-5 padding-3 bg-base-lightest border-left-05 border-accent-cool">
+      <p class="margin-y-0">
+        <strong>Note:</strong> All badge tiers are minted in good faith. Refunds are conceptual. Prices subject to governance volatility. "Stakeholder" status does not imply actual stakes in anything tangible.
+      </p>
+    </div>
+    
+    <div class="margin-top-5">
+      <h3 class="font-heading-lg">Institutional Badges</h3>
+      <p>Special pricing available for government agencies willing to outsource core functions to our protocol partners. Contact our institutional sales team for details on our "Democracy-as-a-Service" enterprise packages.</p>
+      <button class="usa-button usa-button--outline">Request Institutional Access</button>
+    </div>
   </div>
 </section>
 
@@ -118,8 +180,15 @@
   }
   .badge-progress-fill {
     height: 100%;
-    background-color: #00ccbc;
+    background-color: #00bde3;
     transition: width 1.5s ease-out;
+  }
+  .badge-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .badge-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   }
 </style>
 
@@ -127,7 +196,7 @@
   document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".badge-card");
 
-    cards.forEach((card) => {
+    cards.forEach((card, index) => {
       const fill = card.querySelector(".badge-progress-fill");
       const icon = card.querySelector(".badge-icon");
       const body = card.querySelector(".usa-card__body");
@@ -135,14 +204,14 @@
 
       setTimeout(() => {
         fill.style.width = "100%";
-      }, 200);
+      }, 200 + (index * 150));
 
       setTimeout(() => {
         loader.style.display = "none";
         icon.style.display = "block";
         body.style.opacity = 1;
         card.setAttribute("data-loaded", "true");
-      }, 1700);
+      }, 1700 + (index * 150));
     });
   });
 </script>
